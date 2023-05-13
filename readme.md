@@ -228,7 +228,7 @@ Date: Sat May 13 16:57:20 2023 +0530
 
 
 # by defalut this git reset is git reset --mixed
-# which removes the commit and keep your work in staging area head and master points to specified commit 
+# which removes the commit and keep your work in us staged area head and master points to specified commit 
 
 # git reset --hard
 $ git reset --hard ddcd354
@@ -259,4 +259,34 @@ Date:   Sat May 13 16:57:20 2023 +0530
 # by using git reset --hard 
 # all changes in codebase and staging area are removed and head and master branch is pointing to commit ddcd354
 
-sjdhsjd
+$ git reset --soft 0b2b7bf5
+
+$ git log
+commit 0b2b7bf51d22078022d7610d00c1e744f5d1a822 (HEAD -> master)
+Author: Anshul Yadav <anshul.yadav@w3villa.com>
+Date:   Sat May 13 17:58:48 2023 +0530
+
+    updated readme
+
+commit ddcd3547661ae5e395a0de0bcfbf63d9f96e95dc (origin/master)
+Author: Anshul Yadav <anshul.yadav@w3villa.com>
+Date:   Sat May 13 17:48:53 2023 +0530
+
+    updated
+
+commit d294ce98bcff3d1b01b4a426ad6f39e114d2f4d3
+Author: Anshul Yadav <anshul.yadav@w3villa.com>
+Date:   Sat May 13 16:57:20 2023 +0530
+
+    initial commit
+anshul@anshul-Latitude-7480:~/Desktop/git_commands_practice$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   readme.md
+
+
+# by using git reset --soft head and master are pointing to that specified commit  and changes are in staging area
