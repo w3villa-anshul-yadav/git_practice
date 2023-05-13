@@ -228,6 +228,35 @@ Date: Sat May 13 16:57:20 2023 +0530
 
 
 # by defalut this git reset is git reset --mixed
-# which removes the commit and keep your work in staging area
+# which removes the commit and keep your work in staging area head and master points to specified commit 
 
 # git reset --hard
+$ git reset --hard ddcd354
+output => HEAD is now at ddcd354 updated
+
+
+$ git status
+    On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+$ git log
+commit ddcd3547661ae5e395a0de0bcfbf63d9f96e95dc (HEAD -> master, origin/master)
+Author: Anshul Yadav <anshul.yadav@w3villa.com>
+Date:   Sat May 13 17:48:53 2023 +0530
+
+    updated
+
+commit d294ce98bcff3d1b01b4a426ad6f39e114d2f4d3
+Author: Anshul Yadav <anshul.yadav@w3villa.com>
+Date:   Sat May 13 16:57:20 2023 +0530
+
+    initial commit
+
+
+# by using git reset --hard 
+# all changes in codebase and staging area are removed and head and master branch is pointing to commit ddcd354
+
+sjdhsjd
