@@ -1,15 +1,19 @@
+```
 $ mkdir git_commands_practice
-
-# this command will create a directory named as 'git_commands_practice'
-
+```
+# This command will create a directory named as 'git_commands_practice'
+```
 $ cd git_commands_practice/
+```
+# With this command we will change directory to 'git_commands_practice/'
 
-# with this command we will change directory to 'git_commands_practice/'
-
-# now we are in our 'git_commands_practice/' folder ,we will meake this folder to be tracked using git
-
+# Now we are in our 'git_commands_practice/' folder ,we will meake this folder to be tracked using git
+```
 $ git init /'
-output => hint: Using 'master' as the name for the initial branch. This default branch name
+```
+# Output ~ 
+<pre>
+hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
 hint: of your new repositories, which will suppress this warning, call:
 hint:
@@ -20,20 +24,24 @@ hint: 'development'. The just-created branch can be renamed via this command:
 hint:
 hint: git branch -m <name>
 
-Initialized empty Git repository in /home/anshul/Desktop/git_commands_practice/.git/
-
+Initialized empty Git repository in /home/anshul/Desktop/git_commands_practice/.git
+</pre>
+```
 $ git add README.MD
-
+```
+```
 $ touch index.html
-
-# added a new file index.html
-
+```
+# Added a new file index.html
+```
 $ nano index.html
-
-# with this we will write some text in that file
-
+```
+# With this we will write some text in that file
+```
 $ git status
-output =>
+```
+# Output ~
+<pre>
 On branch master
 
 No commits yet
@@ -44,16 +52,18 @@ index.html
 readme.md
 
 nothing added to commit but untracked files present (use "git add" to track)
+</pre>
 
-# this message is showing that there are some files which are not tracked
-
+# This message is showing that there are some files which are not tracked
+```
 $ git add .
-
-# with this all files which are not tracked will be added to staging area
-
+```
+# With this all files which are not tracked will be added to staging area
+```
 $ git status
-
-output =>
+```
+# Output ~
+<pre>
 On branch master
 
 No commits yet
@@ -67,60 +77,74 @@ Changes not staged for commit:
 (use "git add <file>..." to update what will be committed)
 (use "git restore <file>..." to discard changes in working directory)
 modified: readme.md
+</pre>
+# Or we can stage a individual file
 
-# or we can stage a individual file
-
-using
-
+# Using
+```
 $ git add readme.md
-
+```
 # now if we have done our work we can commit these changes
-
+```
 $ git commit -m "initial commit"
-output =>
-
+```
+# Output ~
+<pre>
 [master (root-commit) d294ce9] initial commit
 2 files changed, 71 insertions(+)
 create mode 100644 index.html
 create mode 100644 readme.md
 
-# now we will have to add remote url in this local git repo
-
+</pre>
+# Now we will have to add remote url in this local git repo
+```
 $ git remote add origin git@github.com:w3villa-anshul-yadav/git_practice.git
-
-# we can chek this using
+```
+# We can chek this using
+```
 $ git remote -v
-output =>
-
+```
+# Output ~
+<pre>
 origin git@github.com:w3villa-anshul-yadav/git_practice.git (fetch)
 origin git@github.com:w3villa-anshul-yadav/git_practice.git (push)
+</pre>
+# We have added file to staging area but if we weant to un stage that file then we have to use this command
 
-# we have added file to staging area but if we weant to un stage that file then we have to use this command
-
-# current status is
-
+# Current status is
+```
 $ git status
-output => On branch master
+```
+# Output ~
+<pre>
+ On branch master
 Changes to be committed:
 (use "git restore --staged <file>..." to unstage)
 modified: readme.md
+</pre>
 
-now we will un stage this file
+# Now we will un stage this file
+```
 $ git restore --staged readme.md
-
-if we check status
+```
+# If we check status
+```
 $ git status
-output =>
+```
+# Output ~
+<pre>
 On branch master
 Changes not staged for commit:
 (use "git add <file>..." to update what will be committed)
 (use "git restore <file>..." to discard changes in working directory)
 modified: readme.md
-
 no changes added to commit (use "git add" and/or "git commit -a")
-
+</pre>
+```
 $ git status
-output=>
+```
+# Output~
+<pre>
 On branch master
 Changes to be committed:
 (use "git restore --staged <file>..." to unstage)
@@ -130,25 +154,30 @@ Changes not staged for commit:
 (use "git add <file>..." to update what will be committed)
 (use "git restore <file>..." to discard changes in working directory)
 modified: readme.md
+</pre>
+# We can see that there are some modification in file
 
-# we can see that there are some modification in file
-# if we want to undo these changes untill previous staging area we can do so by
-
+# If we want to undo these changes untill previous staging area we can do so by
+```
 $ git restore readme.md
-
-# now if we check status
-
+```
+# Now if we check status
+```
 $ git status
-output =>
+```
+# Output ~
+<pre>
 On branch master
 Changes to be committed:
 (use "git restore --staged <file>..." to unstage)
 modified: readme.md
-
+</pre>
 # we can check history of all commits and details of commits by
+```
 $ git log
-output=>
-
+```
+# Output~
+<pre>
 commit a528dbe13678e0c3aaa0b745d64749192e2de163 (HEAD -> master, origin/master)
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
 Date: Sat May 13 17:11:24 2023 +0530
@@ -160,12 +189,13 @@ Author: Anshul Yadav <anshul.yadav@w3villa.com>
 Date: Sat May 13 16:57:20 2023 +0530
 
     initial commit
-
+</pre>
 # Now we have to push this code to remote repository
-
+```
 $ git push origin master
-
-output =>
+```
+# Output ~
+<pre>
 Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
 Delta compression using up to 4 threads
@@ -176,9 +206,9 @@ remote: Resolving deltas: 100% (1/1), done.
 To github.com:w3villa-anshul-yadav/git_practice.git
 
 - [new branch] master -> master
-
-# now our commit log is as follows
-
+</pre>
+# Now our commit log is as follows
+<pre>
 commit 64c44265e03f0ccfc890e88be00279805ed0cc1c (HEAD -> master, origin/master)
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
 Date: Sat May 13 17:14:34 2023 +0530
@@ -196,18 +226,22 @@ Author: Anshul Yadav <anshul.yadav@w3villa.com>
 Date: Sat May 13 16:57:20 2023 +0530
 
     initial commit
-
-# if we want to remove this commit we can do this
-
+</pre>
+# If we want to remove this commit we can do this
+```
 $ git reset d294ce98bcf
-
-output=>
+```
+# Output~
+<pre>
 Unstaged changes after reset:
 M readme.md
+</pre>
 
-# now again if we check the status we can see that the file is showing modified and that commit is removed
-
+# Now again if we check the status we can see that the file is showing modified and that commit is removed
+```
 $ git status
+```
+<pre>
 On branch master
 Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
 (use "git pull" to update your local branch)
@@ -216,77 +250,122 @@ Changes not staged for commit:
 (use "git add <file>..." to update what will be committed)
 (use "git restore <file>..." to discard changes in working directory)
 modified: readme.md
-
-# no changes added to commit (use "git add" and/or "git commit -a")
-
+No changes added to commit (use "git add" and/or "git commit -a")
+</pre>
+```
 $ git log
+```
+<pre>
 commit d294ce98bcff3d1b01b4a426ad6f39e114d2f4d3 (HEAD -> master)
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
 Date: Sat May 13 16:57:20 2023 +0530
 
     initial commit
+</pre>
+# By defalut this git reset is git reset --mixed
 
+# Which removes the commit and keep your work in us staged area head and master points to specified commit
 
-# by defalut this git reset is git reset --mixed
-# which removes the commit and keep your work in us staged area head and master points to specified commit 
-
-# git reset --hard
+# git reset --hard command
+```
 $ git reset --hard ddcd354
-output => HEAD is now at ddcd354 updated
-
-
+```
+# Output ~ 
+<pre>
+HEAD is now at ddcd354 updated
+</pre>
+```
 $ git status
-    On branch master
+```
+<pre>
+On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
-
-
+</pre>
+```
 $ git log
+```
+<pre>
 commit ddcd3547661ae5e395a0de0bcfbf63d9f96e95dc (HEAD -> master, origin/master)
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
-Date:   Sat May 13 17:48:53 2023 +0530
+Date: Sat May 13 17:48:53 2023 +0530
 
     updated
 
 commit d294ce98bcff3d1b01b4a426ad6f39e114d2f4d3
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
-Date:   Sat May 13 16:57:20 2023 +0530
+Date: Sat May 13 16:57:20 2023 +0530
 
     initial commit
+</pre>
+# By using git reset --hard
 
-
-# by using git reset --hard 
-# all changes in codebase and staging area are removed and head and master branch is pointing to commit ddcd354
-
+# All changes in codebase and staging area are removed and head and master branch is pointing to commit ddcd354
+```
 $ git reset --soft 0b2b7bf5
-
+```
+```
 $ git log
+```
+<pre>
 commit 0b2b7bf51d22078022d7610d00c1e744f5d1a822 (HEAD -> master)
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
-Date:   Sat May 13 17:58:48 2023 +0530
+Date: Sat May 13 17:58:48 2023 +0530
 
     updated readme
 
 commit ddcd3547661ae5e395a0de0bcfbf63d9f96e95dc (origin/master)
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
-Date:   Sat May 13 17:48:53 2023 +0530
+Date: Sat May 13 17:48:53 2023 +0530
 
     updated
 
 commit d294ce98bcff3d1b01b4a426ad6f39e114d2f4d3
 Author: Anshul Yadav <anshul.yadav@w3villa.com>
-Date:   Sat May 13 16:57:20 2023 +0530
+Date: Sat May 13 16:57:20 2023 +0530
 
     initial commit
-anshul@anshul-Latitude-7480:~/Desktop/git_commands_practice$ git status
+</pre>
+```
+$ git status
+```
+<pre>
 On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
+(use "git push" to publish your local commits)
 
 Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   readme.md
+(use "git restore --staged <file>..." to unstage)
+modified: readme.md
+</pre>
+# By using git reset --soft head and master are pointing to that specified commit and changes are in staging area
 
+# If we want to push this code then we will get and error 
+```
+$ git push
+```
+<pre>
+To github.com:w3villa-anshul-yadav/git_practice.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:w3villa-anshul-yadav/git_practice.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-# by using git reset --soft head and master are pointing to that specified commit  and changes are in staging area
+</pre>
+# We have to use a force flag after push command
+```
+$ git push -f
+```
+<pre>
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.08 KiB | 710.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:w3villa-anshul-yadav/git_practice.git
+ + 64c4426...ddcd354 master -> master (forced update)
+</pre>
