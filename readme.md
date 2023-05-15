@@ -112,6 +112,8 @@ git restore fileName
 git log
 ```
 
+# Now we will see practical
+
 # It give log (history) of all commits , branch hierarchy which branch is created from which branch and there associated commits
 
 ```
