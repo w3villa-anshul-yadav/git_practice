@@ -106,7 +106,7 @@ git restore –staged fileName
 git restore fileName
 ```
 
-# Is used to discard unstaged changes it is like UNDO all changes which are not staged
+# Is used to discard  un staged changes it is like UNDO all changes which are not staged
 
 ```
 git log
@@ -128,7 +128,7 @@ git log
 
 # With this command we will change directory to 'git_commands_practice/'
 
-# Now we are in our 'git_commands_practice/' folder ,we will meake this folder to be tracked using git
+# Now we are in our 'git_commands_practice/' folder ,we will make this folder to be tracked using git
 
 ```
   git init
@@ -202,7 +202,7 @@ On branch master
 No commits yet
 
 Changes to be committed:
-(use "git rm --cached <file>..." to unstage)
+(use "git rm --cached <file>..." to  un stage)
 new file: index.html
 new file: readme.md
 
@@ -242,7 +242,7 @@ create mode 100644 readme.md
   git remote add origin git@github.com:w3villa-anshul-yadav/git_practice.git
 ```
 
-# We can chek this using
+# We can check this using
 
 ```
   git remote -v
@@ -268,7 +268,7 @@ origin git@github.com:w3villa-anshul-yadav/git_practice.git (push)
 <pre>
  On branch master
 Changes to be committed:
-(use "git restore --staged <file>..." to unstage)
+(use "git restore --staged <file>..." to  un stage)
 modified: readme.md
 </pre>
 
@@ -304,7 +304,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <pre>
 On branch master
 Changes to be committed:
-(use "git restore --staged <file>..." to unstage)
+(use "git restore --staged <file>..." to  un stage)
 modified: readme.md
 
 Changes not staged for commit:
@@ -315,7 +315,7 @@ modified: readme.md
 
 # We can see that there are some modification in file
 
-# If we want to undo these changes untill previous staging area we can do so by
+# If we want to undo these changes until previous staging area we can do so by
 
 ```
   git restore readme.md
@@ -332,7 +332,7 @@ modified: readme.md
 <pre>
 On branch master
 Changes to be committed:
-(use "git restore --staged <file>..." to unstage)
+(use "git restore --staged <file>..." to  un stage)
 modified: readme.md
 </pre>
 
@@ -410,7 +410,7 @@ Date: Sat May 13 16:57:20 2023 +0530
 # Output~
 
 <pre>
-Unstaged changes after reset:
+ un staged changes after reset:
 M readme.md
 </pre>
 
@@ -444,7 +444,7 @@ Date: Sat May 13 16:57:20 2023 +0530
     initial commit
 </pre>
 
-# By defalut this git reset is git reset --mixed
+# By default this git reset is git reset --mixed
 
 # Which removes the commit and keep your work in us staged area head and master points to specified commit
 
@@ -531,7 +531,7 @@ Your branch is ahead of 'origin/master' by 1 commit.
 (use "git push" to publish your local commits)
 
 Changes to be committed:
-(use "git restore --staged <file>..." to unstage)
+(use "git restore --staged <file>..." to  un stage)
 modified: readme.md
 </pre>
 
