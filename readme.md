@@ -6,7 +6,7 @@
 ls
 ```
 
-# It list all hidden file and folders current directory
+# It list all  file and folders current directory
 
 ```
 ls -a
